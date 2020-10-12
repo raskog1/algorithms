@@ -3,4 +3,14 @@
 // else return -1
 // You may not use the `indexOf`, `lastIndexOf` or `includes` methods
 
-var linearSearch = function(arr, target) {};
+var linearSearch = function(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+    if (element === target) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+// Solved on 10/12/2020
