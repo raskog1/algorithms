@@ -2,4 +2,17 @@
 // The object should contain keys for each character in the string
 // Each key should point to an array containing the indexes the character is found in the string
 
-var stringMap = function(str) {};
+var stringMap = function (str) {
+    let results = {};
+    for (let i = 0; i < str.length; i++) {
+        const character = str[i];
+        if (results[character]) {
+            results[character].push(i);
+        } else {
+            results[character] = [i];
+        }
+    }
+    return results;
+};
+
+// Solved on 10/13/2020
