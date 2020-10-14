@@ -2,4 +2,11 @@
 // Modify the original array rather than returning a new one
 // There is no need to return from this function
 
-var leftRotation = function(arr, positions) {};
+var leftRotation = function (arr, positions) {
+    for (let i = 0; i < positions; i++) {
+        arr.push(arr[i]);
+    }
+    arr.splice(0, positions);
+};
+
+// Solved on 10/14/2020
